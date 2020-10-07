@@ -4,6 +4,12 @@
 [![codecov](https://codecov.io/gh/edjolabs/image-match/branch/master/graph/badge.svg)](https://codecov.io/gh/edjolabs/image-match)
 
 ![image-match](https://cloud.githubusercontent.com/assets/6517700/17741093/41040a64-649b-11e6-8499-48b78ddca56b.png)
+### Image-match
+
+A fork of https://github.com/EdjoLabs/image-match since they haven't merged some fixes we need.
+
+
+###
 
 image-match is a simple (now Python 3!) package for finding approximate image matches from a
 corpus.  It is similar, for instance, to [pHash](http://www.phash.org/), but
