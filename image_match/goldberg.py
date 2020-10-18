@@ -190,7 +190,7 @@ class ImageSignature(object):
         return np.ravel(diff_mat).astype('int8')
 
     @staticmethod
-    def preprocess_image(image_or_path, bytestream=False, handle_mpo=False):
+    def preprocess_image(image_or_path, bytestream=False, handle_mpo=False, maximum_pixels=89478485):
         """Loads an image and converts to greyscale.
 
         Corresponds to 'step 1' in Goldberg's paper
@@ -236,7 +236,7 @@ class ImageSignature(object):
             return rgb2gray(np.asarray(img, dtype=np.uint8))
         elif type(image_or_path) in string_types or \
              type(image_or_path) is text_type:
-            return imread(image_or_path, as_gray=True)
+            return imread(image_or_path, as_gray=True, maximum_pixels=maximum_pixels)
         elif type(image_or_path) is bytes:
             try:
                 img = Image.open(image_or_path)
